@@ -153,3 +153,30 @@ def Q2AxisAngle(q):
             p = xyz
 
     return p, fi
+
+
+def slerp(q1, q2, tm, t):
+    if t < 0 or t > tm:
+        sys.exit("t nije u odgovarajucem opsegu")
+
+    norm_q1 = la.norm(q1)
+    if norm_q1 != 0:
+        q1 = q1 / norm_q1
+
+    norm_q2 = la.norm(q2)
+    if norm_q2 != 0:
+        q2 = q2 / norm_q2
+
+    cos0 = np.dot(np.array(q1), np.array(q2))
+
+    if cos0 < 0:
+        q1 = -q1
+        cos0 = -cos0
+
+    if cos0 > 0.95:
+        return q1
+
+    fi0 = math.acos(cos0)
+
+    return ((math.sin(fi0 * (1 - t/tm))) / math.sin(fi0))*q1 + ((math.sin(fi0 * (t/tm))) / math.sin(fi0))*q2
+
