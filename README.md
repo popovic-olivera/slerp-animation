@@ -1,5 +1,11 @@
 # geometry-motion-functions
 
+## Slerp animacija:
+
+![Slerp](screenshots/snimak.gif)
+
+## Testiranje funkcija
+
 ![Test primer](screenshots/test_primer_sa_casa.png)
 
 - Funkcije prikazuju rad sa Ojlerovim uglovima, odnosno kako se od njih može dobiti matrica rotacije
@@ -9,5 +15,3 @@
 
 - Takođe, može se testirati kako od prave i ugla da se dobije odgovarajući kvaternion
 - I obrnuto, od kvaterniona prava i ugao 
-
-
