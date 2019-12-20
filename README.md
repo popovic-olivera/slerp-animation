@@ -1,4 +1,4 @@
-# geometry-motion-functions
+# Kretanje prostora i slerp animacija
 
 ## Slerp animacija:
 
